@@ -31,6 +31,7 @@ FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.project_id
 GROUP BY projects.title
+HAVING amount_over_goal >= 0
 ORDER BY projects.title ASC"
 end
 
